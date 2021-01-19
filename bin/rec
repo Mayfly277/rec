@@ -4,4 +4,4 @@ DIR="$( cd "$( dirname "$0" )" && pwd )/../"
 cmd="$@";
 rdate=$(date +"%Y_%m_%d-%T");
 name=$(echo "$cmd"|tr -c '[:alnum:]\.-' '_');
-asciinema rec -q -i 2 ${DIR}/casts/${rdate}_${name}.cast -c "${cmd}" && echo "$rdate : $cmd" > ${DIR}/casts/${rdate}_${name}.info;
+asciinema rec -q -i 2 ${DIR}/casts/${rdate}_${name:0:30}.cast -c "${cmd}" && echo "$rdate : $cmd" > ${DIR}/casts/${rdate}_${name:0:30}.info;

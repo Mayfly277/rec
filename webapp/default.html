@@ -23,9 +23,9 @@
   </a>
   <div class="list-group list-group-flush">
   {% for date,link in links.items() %}
-    <a href="#" onclick="play('{{link['target']}}','{{link['title']}}')" class="list-group-item list-group-item-action bg-light">
+    <a href="#" onclick="play('{{link['target']}}','{{link['cmd']}}')" class="list-group-item list-group-item-action bg-light">
 	    <i class="bi bi-terminal-fill"></i>
-	    {{date}} : {{link['title']}}
+	    {{date}} : {{link['cmd'][:30]}}
     </a>
   {% endfor %}
   </div>
@@ -88,7 +88,7 @@ rec_start <record_name> (type ctrl+D or exit to exit)
     });
 
     function play(filename, infos){
-      document.getElementById('video').innerHTML = '<h2>' + infos + '</h2> <asciinema-player src="' + filename + '" poster="npt:0:10"></asciinema-player>';
+	    document.getElementById('video').innerHTML = '<code>' + infos + '</code><asciinema-player src="' + filename + '" poster="npt:0:10"></asciinema-player>';
     }
   </script>
 

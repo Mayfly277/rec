@@ -17,7 +17,7 @@ def home():
         infos=info_file.read()
         [date,cmd] = infos.split(' : ')
         info_file.close()
-        links[date]={'target' : target, 'title'  : cmd.replace("\n","")}
+        links[date]={'target' : target, 'cmd'  : cmd.replace("\n","")}
     od = collections.OrderedDict(sorted(links.items()))
     return render_template("default.html", title='Home', links=od)
 
