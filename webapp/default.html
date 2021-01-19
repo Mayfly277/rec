@@ -18,12 +18,14 @@
 
 <!-- Sidebar -->
 <div class="bg-light border-right" id="sidebar-wrapper">
-  <div class="sidebar-heading"><i class="bi bi-terminal"></i>  REC</div>
+  <a href="/">
+	<div class="sidebar-heading"><i class="bi bi-terminal"></i>  REC</div>
+  </a>
   <div class="list-group list-group-flush">
-  {% for link in links %}
+  {% for date,link in links.items() %}
     <a href="#" onclick="play('{{link['target']}}','{{link['title']}}')" class="list-group-item list-group-item-action bg-light">
 	    <i class="bi bi-terminal-fill"></i>
-	    {{link['date']}} : {{link['title']}}
+	    {{date}} : {{link['title']}}
     </a>
   {% endfor %}
   </div>
@@ -44,7 +46,27 @@
   <div class="container-fluid">
     <div id="video">
      Tools to record commands on demand
-    </div>
+
+<pre><code>
+- start a command and record it :
+rec <command>
+
+- play recorded command :
+rec_play
+
+- start server :
+rec_browse_start (This launch a python server on http://127.0.0.1:5000/)
+
+- stop server :
+rec_browse_stop
+
+- clean commands recorded :
+rec_clean
+
+- launch rec for multiples commands with a name (juste like asciinema)
+rec_start <record_name> (type ctrl+D or exit to exit)
+</code></pre>
+   </div>
   </div>
 </div>
 <!-- /#page-content-wrapper -->
