@@ -11,7 +11,7 @@ check () {
 }
 
 check "asciinema"
-check "php"
+check "docker"
 check "fzf"
 
 DIR="$( cd "$( dirname "$0" )" && pwd )"

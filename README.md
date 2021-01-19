@@ -15,16 +15,16 @@ rec <command>
 rec_play
 ```
 
-![](assets/screenshot_rec_play.png)
+![](img/screenshot_rec_play.png)
 
 - browse commands start server :
 ```
 rec_browse_start
 ```
 
-This launch a php server on http://127.0.0.1:8181/
+This launch a python server on http://127.0.0.1:5000/
 
-![](assets/screenshot.png)
+![](img/screenshot.png)
 
 
 - browse command stop server :
@@ -47,7 +47,7 @@ rec_start <record_name>
 
 - You need :
  - asciinema
- - php
  - fzf 
+ - docker (to run flask server)
 
 In order to run the application as intented
