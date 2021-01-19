@@ -1,0 +1,4 @@
+#!/bin/bash
+
+DIR="$( cd "$( dirname "$0" )" && pwd )/../"
+asciinema play -i 1 ${DIR}/casts/`cd ${DIR}/casts/ && ls -t1 *.cast|fzf`

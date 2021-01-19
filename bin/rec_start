@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ -z "$1" ]
+  then
+    echo "usage : rec_start <name>"
+fi
+
+DIR="$( cd "$( dirname "$0" )" && pwd )/../"
+name=$1
+rdate=$(date +"%Y_%m_%d-%T");
+echo "$rdate : $name" > ${DIR}/casts/${rdate}_${name}.info;
+asciinema rec -i 2 ${DIR}/casts/${rdate}_${name}.cast
