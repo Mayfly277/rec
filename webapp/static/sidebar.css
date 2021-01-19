@@ -35,6 +35,17 @@
   margin-left: 0;
 }
 
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+  background-color: cadetblue !important;
+}
+
+div.sidebar-heading {
+  background-color: cadetblue;
+  color: white;
+  font-size: 1.4rem;
+  height: 55px;
+}
+
 a.list-group-item {
     padding: 0.2rem 1.25rem;
 }
